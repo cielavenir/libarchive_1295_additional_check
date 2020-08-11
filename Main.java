@@ -12,7 +12,7 @@ class Main{
                 arc.putArchiveEntry(entry);
                 try(FileInputStream f = new FileInputStream(file)){
                     int readlen = 0;
-                    byte[] buf = new byte[65536];
+                    byte[] buf = new byte[2048];
                     for(;(readlen = f.read(buf)) > 0;){
                         arc.write(buf, 0, readlen);
                     }
